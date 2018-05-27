@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MoodLog</string>
+    <string name="log_new_entry">Log new entry</string>
+    <string name="mood10">Awesome</string>
+    <string name="mood9">Great</string>
+    <string name="mood8">Good</string>
+    <string name="mood7">Pretty good</string>
+    <string name="mood6">Okay</string>
+    <string name="mood5">So-so</string>
+    <string name="mood4">Meh</string>
+    <string name="mood3">Bad</string>
+    <string name="mood2">Very bad</string>
+    <string name="mood1">Awful</string>
+</resources>
