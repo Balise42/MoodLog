@@ -11,4 +11,5 @@
     <string name="mood3">Bad</string>
     <string name="mood2">Very bad</string>
     <string name="mood1">Awful</string>
+    <string name="log_activity">Log activity</string>
 </resources>
