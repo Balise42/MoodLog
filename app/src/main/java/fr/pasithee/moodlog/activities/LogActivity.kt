@@ -1,9 +1,10 @@
-package fr.pasithee.moodlog
+package fr.pasithee.moodlog.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import fr.pasithee.moodlog.R
 
 class LogActivity : AppCompatActivity() {
 
