@@ -8,7 +8,7 @@ import fr.pasithee.moodlog.model.MoodRecord
 import java.util.*
 
 class LogActivity : AppCompatActivity() {
-    private var moodRecord : MoodRecord = MoodRecord(-1, Date(), ArrayList(), ArrayList())
+    private var moodRecord : MoodRecord = MoodRecord()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +17,7 @@ class LogActivity : AppCompatActivity() {
     }
 
     fun logLevel(level : Int) {
-        moodRecord.level = level
+        moodRecord.moodRecord.level = level
         supportFragmentManager.beginTransaction().replace(R.id.log_layout, DetailLogFragment.newInstance()).addToBackStack(null).commit()
     }
 
