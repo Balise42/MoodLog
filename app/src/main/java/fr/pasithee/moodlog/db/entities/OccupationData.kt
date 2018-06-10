@@ -9,7 +9,11 @@ import android.arch.persistence.room.PrimaryKey
         foreignKeys = [(ForeignKey(entity = MoodEntryData::class,
                 parentColumns = arrayOf("id"),
                 childColumns = arrayOf("id"),
-                onDelete = ForeignKey.CASCADE))])
-data class OccupationData(@PrimaryKey var id: Long?,
-                          @PrimaryKey var occupation: String
-)
+                onDelete = ForeignKey.CASCADE))],
+        primaryKeys = ["id", "occupation"])
+data class OccupationData(
+        var id: Long = 0,
+        var occupation: String = ""
+) {
+    constructor(occupation: String) : this(0, occupation)
+}
