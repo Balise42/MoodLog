@@ -7,81 +7,90 @@
     android:background="@color/screenBackground"
     tools:context=".activities.DetailLogFragment">
 
-    <TableLayout
-        android:id="@+id/detailTableLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/detailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toTopOf="@id/logActivityButton"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow
+        <TableLayout
+            android:id="@+id/detailTableLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ToggleButton
-                android:id="@+id/toggleButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="Sad"
-                android:textOn="Sad" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ToggleButton
-                android:id="@+id/toggleButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="Calm"
-                android:textOn="Calm" />
+                <ToggleButton
+                    android:id="@+id/toggleButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Sad"
+                    android:textOn="Sad" />
 
-            <ToggleButton
-                android:id="@+id/toggleButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="Happy"
-                android:textOn="Happy" />
-        </TableRow>
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Calm"
+                    android:textOn="Calm" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+                <ToggleButton
+                    android:id="@+id/toggleButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Happy"
+                    android:textOn="Happy" />
+            </TableRow>
 
-            <ToggleButton
-                android:id="@+id/toggleButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="Grateful"
-                android:textOn="Grateful" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ToggleButton
-                android:id="@+id/toggleButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="Anxious"
-                android:textOn="Anxious" />
+                <ToggleButton
+                    android:id="@+id/toggleButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Grateful"
+                    android:textOn="Grateful" />
 
-            <ToggleButton
-                android:id="@+id/toggleButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="Worried"
-                android:textOn="Worried" />
-        </TableRow>
+                <ToggleButton
+                    android:id="@+id/toggleButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Anxious"
+                    android:textOn="Anxious" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Worried"
+                    android:textOn="Worried" />
+            </TableRow>
 
-        </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
+    </android.support.v4.widget.NestedScrollView>
 
     <Button
         android:id="@+id/logActivityButton"
@@ -96,7 +105,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailTableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/detailScrollView"
         app:layout_constraintVertical_bias="0.87" />
 
 </android.support.constraint.ConstraintLayout>

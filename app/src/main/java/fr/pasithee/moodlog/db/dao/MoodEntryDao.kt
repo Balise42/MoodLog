@@ -1,5 +1,6 @@
 package fr.pasithee.moodlog.db.dao
 
+import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
 import fr.pasithee.moodlog.db.entities.DetailData
 import fr.pasithee.moodlog.db.entities.MoodEntryData
@@ -24,6 +25,9 @@ abstract class MoodEntryDao {
 
     @Query("SELECT * FROM occupation where id =:id")
     abstract fun getOccupationData(id : Long) : List<OccupationData>
+
+    @Query("SELECT DISTINCT detail from moodDetail order by detail")
+    abstract fun getDetailNames() : LiveData<List<String>>
 
     fun insertMoodAllData(mood : MoodEntryData) {
         mood.id = insertMood(mood)
