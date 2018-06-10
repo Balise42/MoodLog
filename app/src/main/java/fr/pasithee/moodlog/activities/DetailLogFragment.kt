@@ -25,7 +25,7 @@ class DetailLogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         logActivityButton.setOnClickListener {
             val details = ArrayList<DetailData>()
-            goThroughView(tableLayout, details)
+            goThroughView(detailTableLayout, details)
             (activity as LogActivity).logDetails(details)
         }
     }

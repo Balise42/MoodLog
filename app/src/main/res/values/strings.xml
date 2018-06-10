@@ -12,4 +12,5 @@
     <string name="mood2">Very bad</string>
     <string name="mood1">Awful</string>
     <string name="log_activity">Log activity</string>
+    <string name="save_entry">Save entry</string>
 </resources>
