@@ -18,4 +18,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(logIntent)
     }
 
+
+    fun settings(view : View) {
+        val settingsIntent = Intent(this, SettingsActivity::class.java)
+        startActivity(settingsIntent)
+    }
 }

@@ -28,13 +28,13 @@ class LogActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.log_layout, DetailLogFragment.newInstance()).addToBackStack(null).commit()
     }
 
-    fun logDetails(details : List<DetailData>) {
-        moodEntry.details = details
+    fun logDetails(details : List<String>) {
+        moodEntry.details = details.map {it -> DetailData(it) }
         supportFragmentManager.beginTransaction().replace(R.id.log_layout, OccupationLogFragment.newInstance()).addToBackStack(null).commit()
     }
 
-    fun logOccupations(occupations: ArrayList<OccupationData>) {
-        moodEntry.occupations = occupations
+    fun logOccupations(occupations: List<String>) {
+        moodEntry.occupations = occupations.map { it->OccupationData(it) }
     }
 
     fun saveEntry() {
