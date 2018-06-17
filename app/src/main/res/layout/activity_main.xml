@@ -18,11 +18,21 @@
         android:layout_marginTop="24dp"
         android:onClick="logNew"
         android:text="@string/button_log_new_entry"
-        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintBottom_toTopOf="@+id/viewDataButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/viewDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_view_data"
+        android:onClick="viewData"
+        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintTop_toBottomOf="@+id/logNew"
+        tools:layout_editor_absoluteX="161dp" />
 
     <Button
         android:id="@+id/settings"
@@ -36,6 +46,8 @@
         android:text="@string/button_settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logNew" />
+        app:layout_constraintTop_toBottomOf="@+id/viewDataButton" />
+
 </android.support.constraint.ConstraintLayout>

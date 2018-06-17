@@ -27,6 +27,9 @@ abstract class MoodEntryDao {
     @Query("SELECT * FROM moodEntry where id =:id")
     abstract fun getMoodEntryData(id : Long) : MoodEntryData
 
+    @Query("SELECT * FROM moodEntry where date != 0")
+    abstract fun getMoodEntryData() : LiveData<List<MoodEntryData>>
+
     @Query("SELECT * FROM moodDetail where id =:id")
     abstract fun getDetailData(id : Long) : List<DetailData>
 

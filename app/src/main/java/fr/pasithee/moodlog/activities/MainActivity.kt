@@ -23,4 +23,9 @@ class MainActivity : AppCompatActivity() {
         val settingsIntent = Intent(this, SettingsActivity::class.java)
         startActivity(settingsIntent)
     }
+
+    fun viewData(view : View) {
+        val viewDataIntent = Intent(this, ViewDataActivity::class.java)
+        startActivity(viewDataIntent)
+    }
 }
