@@ -28,11 +28,16 @@
         android:id="@+id/viewDataButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_view_data"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:onClick="viewData"
+        android:text="@string/button_view_data"
         app:layout_constraintBottom_toTopOf="@+id/settings"
-        app:layout_constraintTop_toBottomOf="@+id/logNew"
-        tools:layout_editor_absoluteX="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logNew" />
 
     <Button
         android:id="@+id/settings"
