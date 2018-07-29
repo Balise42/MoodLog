@@ -3,6 +3,7 @@ package fr.pasithee.moodlog.db.dao
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
 import fr.pasithee.moodlog.db.entities.DetailData
+import fr.pasithee.moodlog.db.entities.MoodCountData
 import fr.pasithee.moodlog.db.entities.MoodEntryData
 import fr.pasithee.moodlog.db.entities.OccupationData
 import java.util.*
@@ -56,6 +57,9 @@ abstract class MoodEntryDao {
 
     @Query("DELETE from moodEntry")
     abstract fun deleteMoodEntries()
+
+    @Query("SELECT detail, count(*) as 'count' from moodDetail, moodEntry where moodDetail.id = moodEntry.id and moodEntry.date > :minDate and moodEntry.date < :maxDate  group by detail")
+    abstract fun getMoodCounts(minDate : Date, maxDate : Date) : LiveData<List<MoodCountData>>
 
 
     fun reinitDb() {

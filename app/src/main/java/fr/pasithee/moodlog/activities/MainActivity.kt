@@ -28,4 +28,9 @@ class MainActivity : AppCompatActivity() {
         val viewDataIntent = Intent(this, ViewDataActivity::class.java)
         startActivity(viewDataIntent)
     }
+
+    fun viewOccupationReport(view : View) {
+        val viewOccupationReportIntent = Intent(this, ViewMoodReportActivity::class.java)
+        startActivity(viewOccupationReportIntent)
+    }
 }

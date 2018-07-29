@@ -34,10 +34,20 @@
         android:layout_marginStart="8dp"
         android:onClick="viewData"
         android:text="@string/button_view_data"
-        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintBottom_toTopOf="@+id/viewActivityReportButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logNew" />
+
+    <Button
+        android:id="@+id/viewActivityReportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/but_View_mood_report"
+        android:onClick="viewOccupationReport"
+        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintTop_toBottomOf="@+id/viewDataButton"
+        tools:layout_editor_absoluteX="161dp" />
 
     <Button
         android:id="@+id/settings"
@@ -53,6 +63,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewDataButton" />
+        app:layout_constraintTop_toBottomOf="@+id/viewActivityReportButton" />
 
 </android.support.constraint.ConstraintLayout>

@@ -10,6 +10,8 @@ import com.jjoe64.graphview.series.LineGraphSeries
 import fr.pasithee.moodlog.R
 import fr.pasithee.moodlog.db.MoodLogDb
 import fr.pasithee.moodlog.db.entities.MoodEntryData
+import fr.pasithee.moodlog.db.utils.getCalendarForDate
+import fr.pasithee.moodlog.db.utils.getPastWeekTimestamps
 import kotlinx.android.synthetic.main.activity_view_data.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -27,11 +29,9 @@ class ViewDataActivity : AppCompatActivity() {
     }
 
     private fun initGraph() {
-        val cal = getCalendarForNow()
-        cal.add(Calendar.DAY_OF_YEAR, 1)
-        maxDate = cal.timeInMillis.toDouble()
-        cal.add(Calendar.DAY_OF_YEAR, -7)
-        minDate = cal.timeInMillis.toDouble()
+        val (a, b) = getPastWeekTimestamps()
+        minDate = a
+        maxDate = b
 
         displayGraph()
 
@@ -72,23 +72,6 @@ class ViewDataActivity : AppCompatActivity() {
         cal.add(Calendar.DAY_OF_MONTH, 1)
         maxDate = cal.timeInMillis.toDouble()
         displayGraph()
-    }
-
-    private fun getCalendarForNow() : Calendar {
-        return getCalendarForDate(-1,-1,-1)
-    }
-
-    private fun getCalendarForDate(year: Int, month: Int, day: Int): Calendar {
-        val cal = Calendar.getInstance()
-        if (year >= 0 && month >= 0 && day >= 0) {
-            cal.set(year, month, day)
-        }
-        cal.set(Calendar.HOUR, 0)
-        cal.set(Calendar.MINUTE, 0)
-        cal.set(Calendar.SECOND, 0)
-        cal.set(Calendar.MILLISECOND, 0)
-        cal.set(Calendar.AM_PM, Calendar.AM)
-        return cal
     }
 
     private fun displayGraph() {

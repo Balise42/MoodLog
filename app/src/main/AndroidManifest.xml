@@ -20,6 +20,10 @@
         <activity android:name=".activities.LogActivity" />
         <activity android:name=".activities.SettingsActivity" />
         <activity android:name=".activities.ViewDataActivity" />
+        <activity
+            android:name=".activities.ViewMoodReportActivity"
+            android:label="@string/title_activity_view_occupation_report"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -24,33 +24,27 @@
         android:id="@+id/minDateInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="@string/date_format"
         android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/graph"
-        android:hint="@string/date_format"/>
+        app:layout_constraintTop_toBottomOf="@+id/graph" />
 
     <EditText
         android:id="@+id/maxDateInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="@string/date_format"
         android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minDateInput"
-        android:hint="@string/date_format"/>
+        app:layout_constraintTop_toBottomOf="@+id/minDateInput" />
 
     <Button
         android:id="@+id/button"
@@ -61,6 +55,7 @@
         android:layout_marginTop="8dp"
         android:onClick="updateMinDateFromUI"
         android:text="@string/but_Update_start_date"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/minDateInput"
         app:layout_constraintTop_toBottomOf="@+id/graph" />
 
@@ -73,6 +68,7 @@
         android:layout_marginTop="8dp"
         android:onClick="updateMaxDateFromUI"
         android:text="@string/update_End_date"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/maxDateInput"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
