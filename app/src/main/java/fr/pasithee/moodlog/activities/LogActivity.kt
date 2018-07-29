@@ -10,7 +10,6 @@ import fr.pasithee.moodlog.db.entities.DetailData
 import fr.pasithee.moodlog.db.entities.MoodEntryData
 import fr.pasithee.moodlog.db.entities.OccupationData
 import java.util.*
-import kotlin.collections.ArrayList
 
 class LogActivity : AppCompatActivity() {
 
@@ -38,9 +37,9 @@ class LogActivity : AppCompatActivity() {
     }
 
     fun saveEntry() {
-        AsyncTask.execute({
-            MoodLogDb.getInstance(applicationContext).MoodEntryDao().insertMoodAllData(moodEntry)
-        })
+        AsyncTask.execute {
+            MoodLogDb.getInstance(applicationContext).moodEntryDao().insertMoodAllData(moodEntry)
+        }
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }

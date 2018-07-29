@@ -23,7 +23,7 @@ class MoodEntryDaoTest {
     fun setup() {
         val context = InstrumentationRegistry.getTargetContext()
         db = Room.inMemoryDatabaseBuilder(context, MoodLogDb::class.java).build()
-        dao = db!!.MoodEntryDao()
+        dao = db!!.moodEntryDao()
     }
 
     @Test
@@ -43,8 +43,8 @@ class MoodEntryDaoTest {
     fun shouldInsertMoodAll() {
         //given
         val d = Date()
-        val details = arrayListOf<DetailData>(DetailData("det1"), DetailData("det2"))
-        val occupations = arrayListOf<OccupationData>(OccupationData("occ1"), OccupationData("occ2"))
+        val details = arrayListOf(DetailData("det1"), DetailData("det2"))
+        val occupations = arrayListOf(OccupationData("occ1"), OccupationData("occ2"))
         val mood = MoodEntryData(0, d, 5, details, occupations)
         //when
         dao?.insertMoodAllData(mood)

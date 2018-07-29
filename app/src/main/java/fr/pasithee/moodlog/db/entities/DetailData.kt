@@ -9,7 +9,7 @@ import android.arch.persistence.room.ForeignKey
                 parentColumns = arrayOf("id"),
                 childColumns = arrayOf("id"),
                 onDelete = ForeignKey.CASCADE))],
-        primaryKeys = arrayOf("id", "detail"))
+        primaryKeys = ["id", "detail"])
 data class DetailData(
         var id: Long = 0,
         var detail: String = ""

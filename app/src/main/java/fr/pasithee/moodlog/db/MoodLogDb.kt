@@ -11,7 +11,7 @@ import fr.pasithee.moodlog.db.entities.MoodEntryData
 import fr.pasithee.moodlog.db.entities.OccupationData
 import fr.pasithee.moodlog.db.utils.Converters
 
-@Database(entities = arrayOf(MoodEntryData::class, DetailData::class, OccupationData::class), version = 1, exportSchema = false)
+@Database(entities = [(MoodEntryData::class), (DetailData::class), (OccupationData::class)], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class MoodLogDb : RoomDatabase() {
 
@@ -27,5 +27,5 @@ abstract class MoodLogDb : RoomDatabase() {
                 Room.databaseBuilder(context.applicationContext, MoodLogDb::class.java, "moodlog.db").build()
     }
 
-    abstract fun MoodEntryDao() : MoodEntryDao
+    abstract fun moodEntryDao() : MoodEntryDao
 }

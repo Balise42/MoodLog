@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import fr.pasithee.moodlog.R
 import fr.pasithee.moodlog.db.MoodLogDb
-import fr.pasithee.moodlog.db.entities.DetailData
 import fr.pasithee.moodlog.db.entities.OccupationData
 import fr.pasithee.moodlog.util.UIUtils
 import kotlinx.android.synthetic.main.fragment_occupation_log.*
@@ -28,7 +27,7 @@ class OccupationLogFragment : Fragment() {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        MoodLogDb.getInstance(activity!!.applicationContext).MoodEntryDao().getOccupationNames().observe(this, Observer { list: List<String>? ->
+        MoodLogDb.getInstance(activity!!.applicationContext).moodEntryDao().getOccupationNames().observe(this, Observer { list: List<String>? ->
             UIUtils.createButtons(list, activity!!.applicationContext, occupationTableLayout)
         })
 
@@ -41,7 +40,7 @@ class OccupationLogFragment : Fragment() {
 
         addOccupationButton.setOnClickListener {
             AsyncTask.execute {
-                MoodLogDb.getInstance(activity!!.applicationContext).MoodEntryDao().insertOccupation(OccupationData(-1, newOccupationText.text.toString()))
+                MoodLogDb.getInstance(activity!!.applicationContext).moodEntryDao().insertOccupation(OccupationData(-1, newOccupationText.text.toString()))
             }
         }
     }

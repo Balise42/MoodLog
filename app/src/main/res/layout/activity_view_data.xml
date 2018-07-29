@@ -33,7 +33,8 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/graph" />
+        app:layout_constraintTop_toBottomOf="@+id/graph"
+        android:hint="@string/date_format"/>
 
     <EditText
         android:id="@+id/maxDateInput"
@@ -48,7 +49,8 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minDateInput" />
+        app:layout_constraintTop_toBottomOf="@+id/minDateInput"
+        android:hint="@string/date_format"/>
 
     <Button
         android:id="@+id/button"
@@ -58,7 +60,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="updateMinDateFromUI"
-        android:text="Button"
+        android:text="@string/but_Update_start_date"
         app:layout_constraintStart_toEndOf="@+id/minDateInput"
         app:layout_constraintTop_toBottomOf="@+id/graph" />
 
@@ -70,7 +72,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="updateMaxDateFromUI"
-        android:text="Button"
+        android:text="@string/update_End_date"
         app:layout_constraintStart_toEndOf="@+id/maxDateInput"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 

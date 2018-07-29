@@ -35,7 +35,7 @@ class ViewDataActivity : AppCompatActivity() {
 
         displayGraph()
 
-        MoodLogDb.getInstance(applicationContext).MoodEntryDao().getMoodEntryData().observe(this, Observer {list ->
+        MoodLogDb.getInstance(applicationContext).moodEntryDao().getMoodEntryData().observe(this, Observer { list ->
             list?.let {
                 graph.removeAllSeries()
                 val series = LineGraphSeries<DataPoint>(convertDataToSeries(list))
@@ -105,7 +105,7 @@ class ViewDataActivity : AppCompatActivity() {
         graph.gridLabelRenderer.setHorizontalLabelsAngle(90)
         graph.viewport.isXAxisBoundsManual = true
         graph.viewport.isYAxisBoundsManual = true
-        graph.onDataChanged(false, false);
+        graph.onDataChanged(false, false)
     }
 
     private fun computeNumTicks(): Int {
@@ -114,6 +114,6 @@ class ViewDataActivity : AppCompatActivity() {
     }
 
     private fun convertDataToSeries(list: List<MoodEntryData>): Array<DataPoint>? {
-        return (list.map({it -> DataPoint(it.date, it.level.toDouble())})).toTypedArray()
+        return (list.map { it -> DataPoint(it.date, it.level.toDouble())}).toTypedArray()
     }
 }

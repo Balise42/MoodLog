@@ -26,7 +26,7 @@ class DetailLogFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        MoodLogDb.getInstance(activity!!.applicationContext).MoodEntryDao().getDetailNames().observe(this, Observer { list: List<String>? ->
+        MoodLogDb.getInstance(activity!!.applicationContext).moodEntryDao().getDetailNames().observe(this, Observer { list: List<String>? ->
             UIUtils.createButtons(list, activity!!.applicationContext, detailTableLayout)
         })
 
@@ -38,7 +38,7 @@ class DetailLogFragment : Fragment() {
 
         addDetailButton.setOnClickListener {
             AsyncTask.execute {
-                MoodLogDb.getInstance(activity!!.applicationContext).MoodEntryDao().insertDetail(DetailData(-1, newDetailText.text.toString()))
+                MoodLogDb.getInstance(activity!!.applicationContext).moodEntryDao().insertDetail(DetailData(-1, newDetailText.text.toString()))
             }
         }
     }

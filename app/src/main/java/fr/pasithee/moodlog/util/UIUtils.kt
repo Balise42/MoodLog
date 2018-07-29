@@ -1,14 +1,10 @@
 package fr.pasithee.moodlog.util
 
 import android.content.Context
-import android.text.Layout
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.ToggleButton
-import fr.pasithee.moodlog.R.id.detailTableLayout
-import fr.pasithee.moodlog.db.entities.DetailData
 
 class UIUtils {
     companion object {

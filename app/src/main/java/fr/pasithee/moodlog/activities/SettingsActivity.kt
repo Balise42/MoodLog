@@ -18,16 +18,16 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     fun reinitDatabase(view : View) {
-        AsyncTask.execute({
-            MoodLogDb.getInstance(applicationContext).MoodEntryDao().reinitDb()
-        })
+        AsyncTask.execute {
+            MoodLogDb.getInstance(applicationContext).moodEntryDao().reinitDb()
+        }
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
     fun initDbForTests(view : View) {
-        AsyncTask.execute({
-            val dao = MoodLogDb.getInstance(applicationContext).MoodEntryDao()
+        AsyncTask.execute {
+            val dao = MoodLogDb.getInstance(applicationContext).moodEntryDao()
             dao.reinitDb()
             val cal = Calendar.getInstance()
             cal.set(2018, 6, 20, 9, 30)
@@ -50,7 +50,7 @@ class SettingsActivity : AppCompatActivity() {
             dao.insertMood(MoodEntryData(0, cal.time, 6))
             cal.set(2018, 6, 22, 19, 0)
             dao.insertMood(MoodEntryData(0, cal.time, 5))
-        })
+        }
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
