@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun viewOccupationReport(view : View) {
-        val viewOccupationReportIntent = Intent(this, ViewMoodReportActivity::class.java)
-        startActivity(viewOccupationReportIntent)
+        supportFragmentManager.beginTransaction().add(R.id.mood_report, ViewMoodReportFragment.newInstance()).addToBackStack(null).commit()
+        setContentView(R.layout.fragment_mood_report)
     }
 }

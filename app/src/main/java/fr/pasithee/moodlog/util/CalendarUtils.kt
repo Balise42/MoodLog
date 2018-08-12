@@ -1,4 +1,4 @@
-package fr.pasithee.moodlog.db.utils;
+package fr.pasithee.moodlog.util;
 
 import java.util.*
 

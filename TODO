@@ -1,3 +1,5 @@
+* fix handling of fragments/activities (especially for the viewmoodreport, iz broken)
+
 * handle backups
 * handle export/import
 * handle notifications

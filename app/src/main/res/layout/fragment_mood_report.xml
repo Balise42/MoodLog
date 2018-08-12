@@ -6,8 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screenBackground"
-    tools:context=".activities.ViewMoodReportActivity">
+    tools:context=".activities.ViewMoodReportFragment"
+    android:id="@id/mood_report">
 
 
-
+    <LinearLayout
+        android:id="@+id/viewMoodDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
 </android.support.constraint.ConstraintLayout>

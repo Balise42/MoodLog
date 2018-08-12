@@ -10,8 +10,8 @@ import com.jjoe64.graphview.series.LineGraphSeries
 import fr.pasithee.moodlog.R
 import fr.pasithee.moodlog.db.MoodLogDb
 import fr.pasithee.moodlog.db.entities.MoodEntryData
-import fr.pasithee.moodlog.db.utils.getCalendarForDate
-import fr.pasithee.moodlog.db.utils.getPastWeekTimestamps
+import fr.pasithee.moodlog.util.getCalendarForDate
+import fr.pasithee.moodlog.util.getPastWeekTimestamps
 import kotlinx.android.synthetic.main.activity_view_data.*
 import java.text.SimpleDateFormat
 import java.util.*

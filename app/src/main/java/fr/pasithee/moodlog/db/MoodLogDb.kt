@@ -9,7 +9,7 @@ import fr.pasithee.moodlog.db.dao.MoodEntryDao
 import fr.pasithee.moodlog.db.entities.DetailData
 import fr.pasithee.moodlog.db.entities.MoodEntryData
 import fr.pasithee.moodlog.db.entities.OccupationData
-import fr.pasithee.moodlog.db.utils.Converters
+import fr.pasithee.moodlog.util.Converters
 
 @Database(entities = [(MoodEntryData::class), (DetailData::class), (OccupationData::class)], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)

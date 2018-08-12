@@ -10,7 +10,8 @@ import android.view.ViewGroup
 import fr.pasithee.moodlog.R
 import fr.pasithee.moodlog.db.MoodLogDb
 import fr.pasithee.moodlog.db.entities.OccupationData
-import fr.pasithee.moodlog.util.UIUtils
+import fr.pasithee.moodlog.util.createButtons
+import fr.pasithee.moodlog.util.goThroughView
 import kotlinx.android.synthetic.main.fragment_occupation_log.*
 
 class OccupationLogFragment : Fragment() {
@@ -28,12 +29,12 @@ class OccupationLogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         MoodLogDb.getInstance(activity!!.applicationContext).moodEntryDao().getOccupationNames().observe(this, Observer { list: List<String>? ->
-            UIUtils.createButtons(list, activity!!.applicationContext, occupationTableLayout)
+            createButtons(list, activity!!.applicationContext, occupationTableLayout)
         })
 
         saveEntryButton.setOnClickListener {
             val occupations = ArrayList<String>()
-            UIUtils.goThroughView(occupationTableLayout, occupations)
+            goThroughView(occupationTableLayout, occupations)
             (activity as LogActivity).logOccupations(occupations)
             (activity as LogActivity).saveEntry()
         }
