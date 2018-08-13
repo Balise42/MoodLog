@@ -21,35 +21,36 @@ class LevelLogFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        // TODO dégueu.
         mood1.setOnClickListener {
-            (activity as LogActivity).logLevel(1)
+            (activity as MainActivity).logLevel(1)
         }
         mood2.setOnClickListener {
-            (activity as LogActivity).logLevel(2)
+            (activity as MainActivity).logLevel(2)
         }
         mood3.setOnClickListener {
-            (activity as LogActivity).logLevel(3)
+            (activity as MainActivity).logLevel(3)
         }
         mood4.setOnClickListener {
-            (activity as LogActivity).logLevel(4)
+            (activity as MainActivity).logLevel(4)
         }
         mood5.setOnClickListener {
-            (activity as LogActivity).logLevel(5)
+            (activity as MainActivity).logLevel(5)
         }
         mood6.setOnClickListener {
-            (activity as LogActivity).logLevel(6)
+            (activity as MainActivity).logLevel(6)
         }
         mood7.setOnClickListener {
-            (activity as LogActivity).logLevel(7)
+            (activity as MainActivity).logLevel(7)
         }
         mood8.setOnClickListener {
-            (activity as LogActivity).logLevel(8)
+            (activity as MainActivity).logLevel(8)
         }
         mood9.setOnClickListener {
-            (activity as LogActivity).logLevel(9)
+            (activity as MainActivity).logLevel(9)
         }
         mood10.setOnClickListener {
-            (activity as LogActivity).logLevel(10)
+            (activity as MainActivity).logLevel(10)
         }
     }
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mood_report" type="id">mood_report</item>
+    <item name="layout_main_menu" type="id">layout_main_menu</item>
+</resources>

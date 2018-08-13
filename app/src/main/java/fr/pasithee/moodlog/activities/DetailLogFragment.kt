@@ -34,7 +34,7 @@ class DetailLogFragment : Fragment() {
         logActivityButton.setOnClickListener {
             val details = ArrayList<String>()
             goThroughView(detailTableLayout, details)
-            (activity as LogActivity).logDetails(details)
+            (activity as MainActivity).logDetails(details)
         }
 
         addDetailButton.setOnClickListener {

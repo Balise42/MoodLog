@@ -35,8 +35,8 @@ class OccupationLogFragment : Fragment() {
         saveEntryButton.setOnClickListener {
             val occupations = ArrayList<String>()
             goThroughView(occupationTableLayout, occupations)
-            (activity as LogActivity).logOccupations(occupations)
-            (activity as LogActivity).saveEntry()
+            (activity as MainActivity).logOccupations(occupations)
+            (activity as MainActivity).saveEntry()
         }
 
         addOccupationButton.setOnClickListener {
